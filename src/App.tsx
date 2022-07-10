@@ -1,15 +1,13 @@
-import React from 'react';
-import './App.css';
+import { useState } from 'react';
 import Check from './components/Checkbox/Check';
 import Dropdown from './components/Dropdown/Dropdown';
 
 function App() {
+  const [selected, setSelected] = useState("Choose One");
   return (
     <div className="App">
-      <h2>Custom Form Project</h2>
-      <Dropdown />
+      <Dropdown selected={selected} setSelected={setSelected} />
       <Check />
-      
     </div>
   );
 }
